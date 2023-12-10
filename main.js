@@ -11,17 +11,17 @@
   let adivinanzaCorrecta = false;
 
   while (!adivinanzaCorrecta) {
-    // Solicitar al usuario que ingrese un número
+    // Solicita al usuario que ingrese un número
     let intentoUsuario = prompt("Intenta adivinar el número (entre 1 y 50):");
 
-    // Validar si el usuario ingresó un número
+    // Valida si el usuario ingresó un número
     if (intentoUsuario !== null && intentoUsuario.trim() !== "") {
       let numeroUsuario = parseInt(intentoUsuario);
 
       // Incrementar el contador de intentos
       intentos++;
 
-      // Comprobar si el usuario adivinó el número
+      // Comprueba si el usuario adivinó el número
       if (numeroUsuario === numeroSecreto) {
         alert("¡Felicidades! Adivinaste el número en " + intentos + " intentos.");
         adivinanzaCorrecta = true;
@@ -31,7 +31,7 @@
         alert("El número es demasiado alto. Intenta nuevamente.");
       }
     } else {
-      // Si el usuario no ingresó un número, mostrar un mensaje de error
+      // Si el usuario no ingresó un número, muestra un mensaje de error
       alert("Por favor, ingrese un número válido.");
     }
   }
